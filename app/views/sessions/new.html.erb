@@ -1,0 +1,14 @@
+Sign In Form
+<%= form_for(User.new, url: signin_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :password, 'password' %>
+  <%= f.password_field  :password %>
+  <br>
+
+  <div class="actions">
+    <%= f.submit 'Sign In' %>
+  </div>
+<% end %>

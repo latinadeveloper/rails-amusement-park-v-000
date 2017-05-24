@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<%= @user.name %>
+Tickets: <%= @user.tickets %><br>
+Happiness: <%= @user.happiness %><br>
+Height: <%= @user.height %> <br>
+Mood: <%= @user.mood %>
+
+<% if @user.admin == true%>
+<%= 'ADMIN' %>
+<% end %>
+
+<%= link_to 'See attractions', attractions_path %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
